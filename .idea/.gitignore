@@ -1,2 +1,12 @@
 # Default ignored files
 /workspace.xml
+
+# macOS
+*.DS_Store
+
+# Python
+__pycache__
+
+# Other
+*.iml
+*.xml
