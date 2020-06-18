@@ -108,7 +108,7 @@ def lstm(s_window, l_fwd, n_units, n_epochs, batch_size):
     np.random.seed(10)
 
     # Use the elevation_PRES.csv dataset
-    df = pd.read_csv('C:/Users/leche/OneDrive/Documents/HEC/Advanced Data Analytics/Project/PROJECT_ADA/elevation_PRES.csv', sep=';', header=None,
+    df = pd.read_csv('./data/elevation_PRES.csv', sep=';', header=None,
                      names=['Index', 'Time', 'Elevation (in meters)'])
 
     ## Format the dataframe
@@ -228,7 +228,7 @@ def lstm(s_window, l_fwd, n_units, n_epochs, batch_size):
     plt.tight_layout()
 
     ## ----------UNCOMMENT FOR SAVING FILES---------
-    # filename_full = 'C:/Users/leche/OneDrive/Documents/HEC/Advanced Data Analytics/Project/PROJECT_ADA/plots/plot-' + str(s_window) + '_' + str(l_fwd) + '_' + str(n_units) + '_' + str(n_epochs) + '_' + str(batch_size) + '-full.png'
+    # filename_full = './hyperparmeter_tuning/plots_hyper/plot-' + str(s_window) + '_' + str(l_fwd) + '_' + str(n_units) + '_' + str(n_epochs) + '_' + str(batch_size) + '-full.png'
     # plt.savefig(filename_full)
     # plt.cla
 
@@ -237,7 +237,7 @@ def lstm(s_window, l_fwd, n_units, n_epochs, batch_size):
 
     ## Apply the model to out of sample data
     # Use the elevation_PRES.csv dataset
-    unseen = pd.read_csv('C:/Users/leche/OneDrive/Documents/HEC/Advanced Data Analytics/Project/PROJECT_ADA/elevation_FUT.csv', sep=';', header=None,
+    unseen = pd.read_csv('./data/elevation_FUT.csv', sep=';', header=None,
                      names=['Index', 'Time', 'Elevation (in meters)'])
 
     ## Format the dataframe
@@ -351,7 +351,7 @@ def lstm(s_window, l_fwd, n_units, n_epochs, batch_size):
     plt.tight_layout(pad=0.4, w_pad=0.5, h_pad=1.0)
 
     ## ----------UNCOMMENT FOR SAVING FILES---------
-    # filename = 'C:/Users/leche/OneDrive/Documents/HEC/Advanced Data Analytics/Project/PROJECT_ADA/plots_slide/plot-' + str(s_window) + '_' + str(l_fwd) + '_' + str(n_units) + '_' + str(n_epochs) + '_' + str(batch_size) + '.png'
+    # filename = './plots_slide/plot-' + str(s_window) + '_' + str(l_fwd) + '_' + str(n_units) + '_' + str(n_epochs) + '_' + str(batch_size) + '.png'
     # plt.savefig(filename)
     # plt.cla
 
